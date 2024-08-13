@@ -1,0 +1,7 @@
+{
+    "functions": {
+      "api/events/**": {
+        "maxDuration": 60
+      }
+    }
+  }
