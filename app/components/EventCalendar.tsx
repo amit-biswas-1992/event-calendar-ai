@@ -51,6 +51,7 @@ const EventCalendar: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   const daysOfWeek: string[] = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
   const monthNames: string[] = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
@@ -70,6 +71,7 @@ const EventCalendar: React.FC = () => {
       }
       const fetchedEvents: Event[] = await response.json();
       setEvents(fetchedEvents);
+      
     } catch (error) {
       console.error(`Error fetching events for ${formattedDate}:`, error);
       setError(`Failed to fetch events: ${error instanceof Error ? error.message : String(error)}`);
