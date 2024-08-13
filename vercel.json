@@ -1,6 +1,6 @@
 {
     "functions": {
-      "api/events/**": {
+      "app/api/**/*.ts": {
         "maxDuration": 60
       }
     }
